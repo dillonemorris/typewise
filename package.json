@@ -10,7 +10,7 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "react-scripts": "1.0.6"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
