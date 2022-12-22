@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #f8f8f8;
+  overflow-y: scroll;
+  background-color: #f8fafc;
 }
 
 button,
@@ -10,21 +11,19 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
 }
 
 button,
 input {
-  /* 1 */
   overflow: visible;
 }
 
 button,
 select {
-  /* 1 */
   text-transform: none;
 }
 
@@ -33,6 +32,11 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 /* END OF RESET CSS */
@@ -48,7 +52,6 @@ button,
 .App-header {
   background-color: #fff;
   padding: 40px 0px 30px 0px;
-  color: #fff;
   display: flex;
   flex-direction: column;
   border-bottom: 2px solid #bcccdc;
@@ -57,8 +60,7 @@ button,
 .App-subheader {
   font-family: "Lato", sans-serif;
   font-size: 18px;
-  letter-spacing: 0.83px;
-  color: #829ab1;
+  color: #64748b;
   text-align: center;
   line-height: 1.4;
   margin: 0 auto;
@@ -67,9 +69,8 @@ button,
 
 .App-title {
   font-family: "Roboto Mono", monospace;
-  color: #2680c2 !important;
+  color: #0284c7;
   font-size: 34px;
-  letter-spacing: 0.5px;
   text-align: center;
   margin: 0px auto;
 }
@@ -82,21 +83,20 @@ button,
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
   width: 300px;
-  background-color: #fff;
+  background-color: #f8fafc;
   border-radius: 32px;
-  margin-top: 30px;
+  margin: 30px auto auto;
+  color: #64748b;
 }
 
 .navbar-item {
   font-family: "Lato";
   font-size: 16px;
-  color: #829ab1;
   text-transform: capitalize;
   transition: 0.2s ease all;
   padding: 20px 24px;
-  border-right: 2px solid #d9e2ec;
+  border-right: 2px solid #cbd5e1;
 }
 
 .navbar-item:last-child {
@@ -135,66 +135,52 @@ button,
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   height: 19rem;
-  margin: 10px 5px;
-  padding-top: 10px;
   background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 16px 16px rgba(103, 110, 144, 0.05),
-    0 8px 8px rgba(103, 110, 144, 0.05), 0 4px 4px rgba(103, 110, 144, 0.05),
-    0 2px 2px rgba(103, 110, 144, 0.05);
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  padding: 16px;
 }
 
 .card-title {
-  color: #829ab1;
-  text-transform: uppercase;
-  padding: 0.25rem 0 0 2rem;
-  font-size: 13px;
-  letter-spacing: 0.7px;
+  color: #94a3b8;
+  font-size: 16px;
 }
 
 .card-footer {
-  margin: 1rem 0 1rem 0;
-  padding: 1.25rem 0px;
-  background-color: #f7f7f7;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  overflow: hidden;
+  padding-top: 2rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 16px 16px rgba(103, 110, 144, 0.05),
-    0 8px 8px rgba(103, 110, 144, 0.05), 0 4px 4px rgba(103, 110, 144, 0.05),
-    0 2px 2px rgba(103, 110, 144, 0.05);
+  justify-content: space-between;
+  margin-top: auto;
 }
 
 .card-text-container {
-  height: 56%;
-  padding: 0 2rem;
+  padding-top: 16px;
 }
 
 .card-text {
-  color: #102a43;
+  color: #0f172a;
   font-size: 1.8rem;
-  margin-top: 1rem;
   font-weight: 400;
 }
 
 .card-btn {
-  font-size: 13px;
-  border: 1px solid #d9e2ec;
+  border: 1px solid #cbd5e1;
   background-color: #fff;
-  color: #627d98;
+  color: #64748b;
+  font-size: 14px;
   border-radius: 4px;
-  margin: -3px 6px;
-  padding: 11px 0px;
+  padding: 12px 0px;
   width: 140px;
-  text-align: center;
   display: flex;
   justify-content: center;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  align-items: center;
+  gap: 4px;
   transition: 0.2s ease all;
 }
 
@@ -209,18 +195,9 @@ a {
 }
 
 /* tablet/mobile media query  */
-
 @media (min-width: 600px) {
-  /* .App-title {
-    width: 300px;
-  } */
-
   .card-container {
     padding: 2rem;
-  }
-
-  .card-title {
-    padding: 0.25rem 0 0 2rem;
   }
 
   .App-title {
@@ -237,10 +214,6 @@ a {
     padding: 2rem;
   }
 
-  /* .card-title {
-    padding: 0.25rem 0 0 2rem;
-  } */
-
   .navbar {
     width: 340px;
   }
@@ -256,12 +229,4 @@ a {
   .App-header {
     padding: 60px 0px 40px 0px;
   }
-}
-
-/* desktop/laptop media query  */
-
-@media (min-width: 1000px) {
-}
-
-@media (min-width: 1500px) {
 }
